@@ -18,7 +18,13 @@
   </div>
   <div class="row mt-2">
     <div class="col-12">
-      <input type="text" class="form-control" name="book_author">
+        <select class="form-select" name="book_author">
+            <option>Joanne Rowling</option>
+            <option>Abai Kunanbaev</option>
+            <option>Alexander Pushkin</option>
+            <option>Lev Tolstoy</option>
+            <option>Agatha Christie</option>
+        </select>
     </div>
   </div>
   <%-- названия жанра --%>

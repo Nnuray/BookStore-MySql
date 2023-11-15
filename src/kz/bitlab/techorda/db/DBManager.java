@@ -27,25 +27,25 @@ public class DBManager {
                 )
         );
 
-        books.add(
-                new kz.bitlab.techorda.db.Book(3,
-                        "Harry Potter and the Chamber of Secrets",
-                        "Joane Rowling",
-                        "Fantasy",
-                        7000,
-                        "film about Chamber of Secrets"
-                )
-        );
-
-        books.add(
-                new kz.bitlab.techorda.db.Book(4,
-                        "Harry Potter and the Goblet of Fire",
-                        "Joane Rowling",
-                        "Fantasy",
-                        4000,
-                        "Film about Goblet of fire"
-                )
-        );
+//        books.add(
+//                new kz.bitlab.techorda.db.Book(3,
+//                        "Harry Potter and the Chamber of Secrets",
+//                        "Joane Rowling",
+//                        "Fantasy",
+//                        7000,
+//                        "film about Chamber of Secrets"
+//                )
+//        );
+//
+//        books.add(
+//                new kz.bitlab.techorda.db.Book(4,
+//                        "Harry Potter and the Goblet of Fire",
+//                        "Joane Rowling",
+//                        "Fantasy",
+//                        4000,
+//                        "Film about Goblet of fire"
+//                )
+//        );
     }
     public static ArrayList<kz.bitlab.techorda.db.Book> getBooks(){
         return books;
