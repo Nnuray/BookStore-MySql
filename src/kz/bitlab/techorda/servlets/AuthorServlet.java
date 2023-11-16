@@ -5,13 +5,21 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import kz.bitlab.techorda.db.Author;
+import kz.bitlab.techorda.db.Book;
+import kz.bitlab.techorda.db.DBConnection;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-@WebServlet(value = "/add-book-page")
-public class AddBookPage extends HttpServlet {
+@WebServlet(value = "/authors")
+public class AuthorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/add-book.jsp").forward(request,response);
+
+        ArrayList<Author> authors = DBConnection.getAuthors();
+        request.setAttribute("avtory", authors);
+
+        request.getRequestDispatcher("/authors.jsp").forward(request, response);
     }
 }

@@ -6,26 +6,27 @@ public class DBManager {
     private static final ArrayList<kz.bitlab.techorda.db.Book> books = new ArrayList<>();
     private static int id = 5;
 
-    static {
-        books.add(
-                new kz.bitlab.techorda.db.Book(1,
-                        "Harry Potter and Philosophy stone",
-                        "Joane Rowling",
-                        "Fantasy",
-                        5000,
-                        "Surviving after Voldemort's attack"
-                )
-        );
-
-        books.add(
-                new kz.bitlab.techorda.db.Book(2,
-                        "Harry Potter and Azkaban prison",
-                        "Joane Rowling",
-                        "Fantasy",
-                        6000,
-                        "Sirius Black after Azkaban"
-                )
-        );
+//    static {
+//        books.add(
+//                new kz.bitlab.techorda.db.Book(1,
+//                        "Harry Potter and Philosophy stone",
+//                        "Joane Rowling",
+//                        "Fantasy",
+//                        5000,
+//                        "Surviving after Voldemort's attack"
+//                )
+//        );
+//
+//        books.add(
+//                new kz.bitlab.techorda.db.Book(2,
+//                        "Harry Potter and Azkaban prison",
+//                        "Joane Rowling",
+//                        "Fantasy",
+//                        6000,
+//                        "Sirius Black after Azkaban"
+//                )
+//        );
+//    }
 
 //        books.add(
 //                new kz.bitlab.techorda.db.Book(3,
@@ -46,7 +47,6 @@ public class DBManager {
 //                        "Film about Goblet of fire"
 //                )
 //        );
-    }
     public static ArrayList<kz.bitlab.techorda.db.Book> getBooks(){
         return books;
     }

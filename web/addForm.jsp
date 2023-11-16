@@ -1,3 +1,4 @@
+<%@ page import="kz.bitlab.techorda.db.Author" %>
 <form action="/add-book" method="post">
   <%-- названия книг --%>
   <div class="row mt-3">
@@ -19,11 +20,16 @@
   <div class="row mt-2">
     <div class="col-12">
         <select class="form-select" name="book_author">
-            <option>Joanne Rowling</option>
-            <option>Abai Kunanbaev</option>
-            <option>Alexander Pushkin</option>
-            <option>Lev Tolstoy</option>
-            <option>Agatha Christie</option>
+          <%
+            ArrayList<Author> authors = (ArrayList<Author>) request.getAttribute("avtory");
+            if(authors!=null){
+              for(Author author : authors){
+          %>
+          <option value="<%=author.getId()%>"><%=author.getFirstName() + " " + author.getLastName()%></option>
+          <%
+            }
+            }
+          %>
         </select>
     </div>
   </div>

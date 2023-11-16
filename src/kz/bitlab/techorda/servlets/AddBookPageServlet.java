@@ -6,23 +6,18 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import kz.bitlab.techorda.db.Author;
-import kz.bitlab.techorda.db.Book;
 import kz.bitlab.techorda.db.DBConnection;
-import kz.bitlab.techorda.db.DBManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(value = "/home.html")
-public class HomeServlet extends HttpServlet {
+@WebServlet(value = "/add-book-page")
+public class AddBookPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Book> books = DBConnection.getBooks();
-        request.setAttribute("knigi", books);
-
         ArrayList<Author> authors = DBConnection.getAuthors();
         request.setAttribute("avtory", authors);
 
-        request.getRequestDispatcher("/books.jsp").forward(request, response);
+        request.getRequestDispatcher("/add-book.jsp").forward(request,response);
     }
 }
